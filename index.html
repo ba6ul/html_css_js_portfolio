@@ -1,18 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="Auther" content="Babul">
-    <meta name="Description" content="This is a web page about Babul Raj">
-    <title>Babul: CV</title>
-    <link rel="icon" href="./images/babul_pfp.png">
-    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f9f9f9;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #007bff;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.8em;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hidden Art Section */
+        #art-section {
+            display: none;
+        }
+
+        #toggle-art {
+            cursor: pointer;
+            color: #007bff;
+            font-size: 1em;
+            text-decoration: underline;
+        }
+
+        #toggle-art:hover {
+            color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
-    <img src="./images/babul_pfp.png" alt="My Profile Picture" height="250px">
-    <h1>Babul Raj Singh</h1>
-    <p>This is my CV, You can give me feedback</p>
+    <header>
+        <h1>Your Name</h1>
+        <p>Computer Science Student | App Developer | Web Developer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a third-year Computer Science student with experience in developing apps and websites. My passion lies in creating efficient and user-friendly solutions. I thrive in solving complex problems and learning new technologies.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>App 1:</strong> A mobile app for managing personal tasks efficiently. <a href="#">View Project</a></li>
+            <li><strong>Website 1:</strong> An e-commerce website built using modern frameworks. <a href="#">View Project</a></li>
+            <li><strong>App 2:</strong> A game app developed using Unity for Android. <a href="#">View Project</a></li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me for collaborations or queries:</p>
+        <ul>
+            <li>Email: yourname@example.com</li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></li>
+            <li>GitHub: <a href="https://github.com/yourgithub" target="_blank">yourgithub</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. Built with love and code. <span id="toggle-art">See my hidden art section.</span></p>
+    </footer>
+
+    <section id="art-section">
+        <h2>Art and Creativity</h2>
+        <p>Explore my creative side with projects in video editing, photo editing, and animation. While not my primary focus, these artistic pursuits allow me to experiment and bring fresh ideas into my tech work.</p>
+    </section>
+
+    <script>
+        const toggleArt = document.getElementById('toggle-art');
+        const artSection = document.getElementById('art-section');
+
+        toggleArt.addEventListener('click', () => {
+            if (artSection.style.display === 'none' || artSection.style.display === '') {
+                artSection.style.display = 'block';
+                toggleArt.textContent = 'Hide my hidden art section.';
+            } else {
+                artSection.style.display = 'none';
+                toggleArt.textContent = 'See my hidden art section.';
+            }
+        });
+    </script>
 </body>
 
 </html>
